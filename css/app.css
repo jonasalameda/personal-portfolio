@@ -26,7 +26,11 @@ main, header {
     width: 100%;
 }
 
+.icon-link {
+    text-decoration: none;
+}
+
 .footer {
-    background-color: #DAD7CD;
+    background-color: #344e41;
 }
 
