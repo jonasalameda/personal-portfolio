@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/css/app.css">
     <link rel="icon" type="image/x-icon" href="./assets/img/fluent--document-24-filled.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Personal Portfolio\Jonas</title>
+    <title>Portfolio / Jonas</title>
 </head>
 
 <body>
@@ -20,7 +20,6 @@
             </div>
         </section>
         
-        <!-- custom second navbar -->
         <div class="sticky-top">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
@@ -45,11 +44,14 @@
                 </div>
             </nav>
         </div>
+        
+        <br>
 
         <section id="about">
             <div class="container-fluid">
                 <div class="row">
                     <h1>About me</h1>
+                    <hr>
                     <div class="col">
                         <p>
                             Computer Science and Technology (CST) student at Vanier. 
@@ -61,17 +63,89 @@
                 </div>
             </div>
         </section>
+        
 
         <section id="certifications">
             <div>
                 <h1>Certifications</h1>
+                <hr>
                 <p>Lorem ipsum dolor dolores inventore accusamus magnam consectetur optio, expedita omnis totam nostrum facere, fugiat natus neque at! Ipsam odit consequuntur cumque aliquid quisquam saepe, placeat doloribus inventore quasi, non, harum omnis accusamus?</p>
             </div>
         </section>
 
         <section id="projects">
             <div>
-                <h1>Projects</h1>
+                <h1 class="display-5">Projects</h1>
+                <hr>
+                <div class="accordion accordion-flush" id="projectsAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#websiteProjectOne" aria-expanded="false" aria-controls="flush-collapseThree">
+                            [<strong>Website</strong>&#160;Project] Tea Shop 
+                        </button>
+                        </h2>
+                        <div id="websiteProjectOne" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                        <div class="accordion-body">
+                            Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#unixProjectOne" aria-expanded="false" aria-controls="flush-collapseThree">
+                            [<strong>Raspberry Pi</strong>&#160;Project] Motion detection camera
+                        </button>
+                        </h2>
+                        <div id="unixProjectOne" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                        <div class="accordion-body">
+                            Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.
+                        </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#applicationProjectOne" aria-expanded="false" aria-controls="flush-collapseThree">
+                            [<strong>C# Application</strong>&#160;Project] Montreal Scenic Tours
+                        </button>
+                        </h2>
+                        <div id="applicationProjectOne" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                        <div class="accordion-body">
+                            Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#gameProjectOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            [<strong>Java</strong>&#160;Game Project] Lights Out
+                        </button>
+                        </h2>
+                        <div id="gameProjectOne" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                            <div class="accordion-body">
+                                Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item’s accordion body.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#consoleProjectOne" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            [<strong>Java</strong>&#160;Console Application] Student Management System
+                        </button>
+                        </h2>
+                        <div id="consoleProjectOne" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item’s accordion body. Let’s imagine this being filled with some actual content.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#databaseProjectOne" aria-expanded="false" aria-controls="flush-collapseThree">
+                            [<strong>MYSQL Database</strong>&#160;Project] Montreal Scenic Tours
+                        </button>
+                        </h2>
+                        <div id="databaseProjectOne" class="accordion-collapse collapse" data-bs-parent="#projectsAccordion">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item’s accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                        </div>
+                    </div>
+                    </div>
             </div>
         </section>
     </main>
