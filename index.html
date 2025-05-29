@@ -45,11 +45,42 @@
                         </ul>
                     </div>
                     
-                    <div class="d-flex">
-                        <a class="btn btn-outline-light" href="#information" role="button">Contact me</a>
-                    </div>
+                    <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        Contact me 
+                    </button>
                 </div>
             </nav>
+        </div>
+        
+        <div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Send an email</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="recipient-name" class="col-form-label">Your Email:</label>
+                                <input type="email" class="form-control" id="recipient-name" placeholder="example@placeholder">
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject-text" class="col-form-label">Subject:</label>
+                                <input type="text" class="form-control" id="subject-text" placeholder="Subject">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message-text" class="col-form-label">Message:</label>
+                                <textarea class="form-control" id="message-text" style="resize: none;" placeholder="Message"></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-success">Send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <br>
@@ -57,11 +88,13 @@
         <section id="information">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col">
-                        <h1>Jonas Faes de Almeida</h1>
-                        <h2>Computer Science and Technology Student</h2>
-                        <p class="lead">This is my personal portfolio, where I showcase my projects, skills, and certifications.</p>
-                        <p>Feel free to explore and learn more about my work!</p>
+                    <div class="col text-center">
+                        <h1 class="display-3">Jonas Faes de Almeida</h1>
+                        <h2 class="display-6">Computer Science and Technology Student</h2>
+                        <p class="lead">This is my personal portfolio, where you can see what I've worked on, my skills and certifications!</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="about">
@@ -70,11 +103,7 @@
                     <h1>About me</h1>
                     <hr>
                     <div class="col">
-                        <p>A few things before we get started</p>
-                        <ul>
-                            <li>Member of the Vanier F.L.O.S.S. club</li>
-                            <li>Frequently participating on Hackathons</li>
-                        </ul>
+                        <p></p>
                     </div>
                     <div class="col">
                         <img class="about-img" src="./assets/img/test-image.png" alt="">
