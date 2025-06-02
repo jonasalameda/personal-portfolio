@@ -6,6 +6,7 @@ function initHome() {
     const msg = document.querySelector("#message-text");
 
     // TODO: implement mailjet API
+    // ! implement mailjet api
         document.querySelector("#sendEmail").addEventListener("click", () => {
             console.log("biel")
             window.open(`mailto:jomas.almei@gmail.com?subject=${subject.value}&body=${msg.value}`)
