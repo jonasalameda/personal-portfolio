@@ -1,37 +1,92 @@
 document.addEventListener("DOMContentLoaded", initHome);
 
 function initHome() {
-    const email = document.querySelector("#recipient-email");
-    const subject = document.querySelector("#subject-text");
-    const msg = document.querySelector("#message-text");
+	const email = document.querySelector("#recipient-email");
+	const subject = document.querySelector("#subject-text");
+	const msg = document.querySelector("#message-text");
+	const name = document.querySelector("#contact-name");
 
-    // TODO: implement mailjet API
-    // ! implement mailjet api
         document.querySelector("#sendEmail").addEventListener("click", () => {
-            console.log("biel")
-            window.open(`mailto:jomas.almei@gmail.com?subject=${subject.value}&body=${msg.value}`)
+            if (validateForm(msg, email, subject, name)) {
+				document.querySelector("#sendEmail").disabled = true;
+				sendEmail(msg.value, email.value, subject.value, name.value);
+			}
     })
 }
 
-// msg.addEventListener("click", () => {
-//     msg.classList.remove("border-danger")
-// })
+function sendEmail(message, email, subject, name) {
+    fetch('https://api.mailjet.com/v3.1/send', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+			'Authorization': 'Basic' + btoa("347782e31315146a2119a6d2f0479b95:1d08b163bfcc12be2d6d4c5c1c4d06e6")
+        },
+        body: `"Messages":[
+				{
+						"From": {
+								"Email": "jomas.almei@gmail.com",
+								"Name": "${name}"
+						},
+						"To": [
+								{
+										"Email": "jomas.almei@gmail.com",
+										"Name": "${name}"
+								}
+						],
+						"Subject": "${subject}",
+						"TextPart": "${message}",
+						"HTMLPart": "<h1>${email} has contacted you through your website</h1><p>${message}</p>"
+				}
+		]`
+    })
+}
 
-// function validateForm(event) {
-//     event.preventDefault();
+function validateForm(message, email, subject, name) {
+	let isFormValid = true;
 
-//     if (msg.value === "") {
-//         changeLabelColor(msg)
-//         return;
-//     }
-//     if (subject.value === "") {
-//         changeLabelColor(subject)
-//         return;
-//     }
+	// there surely is a better way to do this, but i needa have this ready as soon as possible, so we can make it more efficient another day idk
+	// TODO: efficiency
+	if (message.value === "") {
+		message.classList.add("border", "border-danger")
+		isFormValid = false;
+	} else {
+		message.classList.add("border", "border-success")
+		message.classList.remove("border", "border-danger")
+	}
 
-//     window.open(`mailto:jomas.almei@gmail.com?subject=${}&body=${}`)
-// }
+	if (email.value === "") {
+		email.classList.add("border", "border-danger")
+		isFormValid = false;
+	} else {
+		email.classList.add("border", "border-success")
+		email.classList.remove("border", "border-danger")
+	}
+	if (subject.value === "") {
+		subject.classList.add("border", "border-danger")
+		isFormValid = false;
+	} else {
+		subject.classList.add("border", "border-success")
+		subject.classList.remove("border", "border-danger")
+}
+	if (name.value === "") {
+		name.classList.add("border", "border-danger")
+		isFormValid = false;
+	} else {
+		name.classList.add("border", "border-success")
+		name.classList.remove("border", "border-danger")
+	}
 
-// function changeLabelColor(element) {
-//     element.classList.add("border-danger");
-// }
+	if (!isFormValid) {
+		const element = document.createElement('div');
+		element.classList.add(['alert', 'alert-danger']);
+		element.role = 'alert';
+		document.querySelector("#alertContainer").appendChild(element)
+
+		setTimeout(() => {
+			element.remove()
+		}, 4000);
+		return false;
+	}
+
+	return true;
+}
