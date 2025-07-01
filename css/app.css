@@ -1,3 +1,7 @@
+/*
+! TODO: STYLING BOOTSTRAP CLASSES
+*/
+
 main, header {
     font-family: 'Courier New', Courier, monospace, Arial, sans-serif;
     font-size: large;
@@ -50,4 +54,9 @@ main, header {
 .footer {
     background-color: #344e41;
     transition: 0.5s;
+}
+
+.accordion-button[aria-expanded="true"] {
+    background-color: #344e41;
+    color: #DAD7CD;
 }

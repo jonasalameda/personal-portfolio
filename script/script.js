@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", initHome);
 
-function initHome() {
+async function initHome() {
 	const email = document.querySelector("#recipient-email");
 	const subject = document.querySelector("#subject-text");
 	const msg = document.querySelector("#message-text");
@@ -19,7 +19,7 @@ function sendEmail(message, email, subject, name) {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
-			'Authorization': 'Basic' + btoa("347782e31315146a2119a6d2f0479b95:1d08b163bfcc12be2d6d4c5c1c4d06e6")
+			'Authorization': 'Basic' + btoa("")
         },
         body: `"Messages":[
 				{
@@ -45,7 +45,7 @@ function validateForm(message, email, subject, name) {
 	let isFormValid = true;
 
 	// there surely is a better way to do this, but i needa have this ready as soon as possible, so we can make it more efficient another day idk
-	// TODO: efficiency
+	// TODO: efficiency?
 	if (message.value === "") {
 		message.classList.add("border", "border-danger")
 		isFormValid = false;
