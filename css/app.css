@@ -20,7 +20,7 @@ main, header {
 }
 
 .introduction {
-    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.83)), url('/assets/img/intro-background.jpg');
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.83)), url('./assets/img/intro-background.jpg');
     background-size: 100%;
     padding: 12%;
     color: rgb(255, 255, 255);
