@@ -9,42 +9,44 @@ async function initHome() {
         document.querySelector("#sendEmail").addEventListener("click", () => {
             if (validateForm(msg, email, subject, name)) {
 				document.querySelector("#sendEmail").disabled = true;
-				sendEmail(msg.value, email.value, subject.value, name.value);
+				document.querySelector
+				// sendEmail(msg.value, email.value, subject.value, name.value);
 			}
     })
 }
 
-function sendEmail(message, email, subject, name) {
-    fetch('https://api.mailjet.com/v3.1/send', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-			'Authorization': 'Basic' + btoa("")
-        },
-        body: `"Messages":[
-				{
-						"From": {
-								"Email": "jomas.almei@gmail.com",
-								"Name": "${name}"
-						},
-						"To": [
-								{
-										"Email": "jomas.almei@gmail.com",
-										"Name": "${name}"
-								}
-						],
-						"Subject": "${subject}",
-						"TextPart": "${message}",
-						"HTMLPart": "<h1>${email} has contacted you through your website</h1><p>${message}</p>"
-				}
-		]`
-    })
-}
+// function sendEmail(message, email, subject, name) {
+//     fetch('https://api.mailjet.com/v3.1/send', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+// 			'Authorization': 'Basic' + btoa("")
+//         },
+//         body: `"Messages":[
+// 				{
+// 						"From": {
+// 								"Email": "jomas.almei@gmail.com",
+// 								"Name": "${name}"
+// 						},
+// 						"To": [
+// 								{
+// 										"Email": "jomas.almei@gmail.com",
+// 										"Name": "${name}"
+// 								}
+// 						],
+// 						"Subject": "${subject}",
+// 						"TextPart": "${message}",
+// 						"HTMLPart": "<h1>${email} has contacted you through your website</h1><p>${message}</p>"
+// 				}
+// 		]`
+//     })
+// }
 
 function validateForm(message, email, subject, name) {
 	let isFormValid = true;
 
-	// there surely is a better way to do this, but i needa have this ready as soon as possible, so we can make it more efficient another day idk
+	// there surely is a better way to do this, but i needa have this ready as soon as possible, 
+	// so we can make it more efficient another day idk
 	// TODO: efficiency?
 	if (message.value === "") {
 		message.classList.add("border", "border-danger")
